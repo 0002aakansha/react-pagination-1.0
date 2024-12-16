@@ -1,2 +1,2 @@
-import useNotification from "./hooks/useNotification";
-export default useNotification;
+import useFetchData from "./hooks/useFectchData";
+export default useFetchData;

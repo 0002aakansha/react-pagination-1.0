@@ -1,53 +1,38 @@
-# React Toast Popup
+# React pagination
 
-React Toast Popup is a simple and customizable toast notification component for React applications.
+React pagination is a simple and customizable notification component for React applications.
 
-![Frontend_System_Design_Questions__Toast_Component___HLD_LLD](https://github.com/piyush-eon/react-toast-popup/assets/51760520/be023ecf-39fb-4cb0-beeb-98519050ba99)
+![Frontend_System_Design_Questions__Component___HLD_LLD](https://github.com/piyush-eon/react-pagination/assets/51760520/be023ecf-39fb-4cb0-beeb-98519050ba99)
 
 ## Installation
 
-You can install React Toast Popup via npm:
+You can install React pagination via npm:
 
 ```jsx
-npm install react-toast-popup
+npm install react-custom-pagination
 ```
 
 ## Usage
 
-To use React Toast Popup in your React application, follow these steps:
+To use React pagination in your React application, follow these steps:
 
-Import the useNotification hook and necessary styles in your component:
-
-```jsx
-import useNotification from "react-toast-popup";
-```
-
-Initialize the useNotification hook with your preferred position:
+Import the useFetchData hook and necessary styles in your component:
 
 ```jsx
-const { NotificationComponent, triggerNotification } =
-  useNotification("top-left");
+import useFetchData from "react-pagination";
 ```
 
-#### Postions
-
-- "bottom-left"
-- "bottom-right"
-- "top-left"
-- "top-right"
-
-Use NotificationComponent in your JSX to display notifications:
+Initialize the useFetchData hook with your preferred position:
 
 ```jsx
-return (
-  <div className="App">
-    {NotificationComponent}
-    {/* Your other JSX content */}
-  </div>
-);
+const { items,
+        pagnatedData,
+        onClickNext,
+        onClickPrev } =
+  useFetchData("top-left");
 ```
 
-Trigger notifications using the triggerNotification function:
+Trigger  using the triggerNotification function:
 
 ```jsx
 triggerNotification({
@@ -59,7 +44,7 @@ triggerNotification({
 
 #### Animations
 
-You can specify an animation type for the notifications. The available animations are:
+You can specify an animation type for the . The available animations are:
 
 - "fade"
 - "pop"
@@ -77,7 +62,7 @@ triggerNotification({
 ## API
 
 ```jsx
-useNotification(position: PositionType)
+useFetchData(position: PositionType)
 ```
 
 This hook returns an object with the following properties:
@@ -95,15 +80,15 @@ The triggerNotification function accepts an object of type NotificationProps, wh
 
 ## Example
 
-Here's a basic example of how to use React Toast Popup:
+Here's a basic example of how to use React pagination:
 
 ```jsx
 import React from "react";
-import useNotification from "react-toast-popup";
+import useFetchData from "react-pagination";
 
 function App() {
   const { NotificationComponent, triggerNotification } =
-    useNotification("top-left");
+    useFetchData("top-left");
 
   const handleButtonClick = () => {
     triggerNotification({
@@ -116,7 +101,7 @@ function App() {
   return (
     <div className="App">
       {NotificationComponent}
-      <h1>Toast Component</h1>
+      <h1 Component</h1>
       <button onClick={handleButtonClick}>Show Success</button>
     </div>
   );
