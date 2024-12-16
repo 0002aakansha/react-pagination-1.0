@@ -1,6 +1,6 @@
 {
   "name": "react-custom-pagination1.0",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "React pagination is a simple and customizable pagination component for React applications.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

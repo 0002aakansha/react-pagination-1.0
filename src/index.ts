@@ -1,2 +1,2 @@
-import useFetchData from "./hooks/useFectchData";
+import useFetchData from "./hooks/useFetchData";
 export default useFetchData;
